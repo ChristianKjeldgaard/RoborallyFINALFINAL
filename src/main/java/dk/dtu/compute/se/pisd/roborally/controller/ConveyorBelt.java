@@ -44,6 +44,7 @@ public class ConveyorBelt extends FieldAction {
     public ConveyorBelt(Heading heading){
         this.heading = heading;
     }
+
     public void setHeading(Heading heading) {
         this.heading = heading;
     }
@@ -56,6 +57,7 @@ public class ConveyorBelt extends FieldAction {
         Player player = space.getPlayer();
         if(player != null && neighbour != null){
             try {
+                player.setHeading(heading);
                 gameController.moveToSpace(player, neighbour, heading);
                 return true;
             } catch (ImpossibleMoveException e) {

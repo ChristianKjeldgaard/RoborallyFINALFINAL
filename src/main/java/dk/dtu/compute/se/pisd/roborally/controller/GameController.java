@@ -186,12 +186,6 @@ public class GameController {
                     }
                     executeCommand(currentPlayer, command);
                 }
-                List<FieldAction> fieldActions = currentPlayer.getSpace().getActions();
-                if(fieldActions != null){
-                    for (FieldAction action: fieldActions) {
-                        action.doAction(this, currentPlayer.getSpace());
-                    }
-                }
 
                 int nextPlayerNumber = board.getPlayerNumber(currentPlayer) + 1;
                 if (nextPlayerNumber < board.getPlayersNumber()) {
@@ -202,6 +196,8 @@ public class GameController {
                         makeProgramFieldsVisible(step);
                         board.setStep(step);
                         board.setCurrentPlayer(board.getPlayer(0));
+                        for(int i = 0; i < board.getPlayersNumber(); i++)
+                            triggerBoardElements(board.getPlayer(i));
                     } else {
                         startProgrammingPhase();
                     }
@@ -216,6 +212,19 @@ public class GameController {
         }
     }
 
+    /**
+     * @author Seier
+     * @author Christian
+     * Håndterer aktivering af boardelements
+     */
+    public void triggerBoardElements(Player currentPlayer){
+        List<FieldAction> fieldActions = currentPlayer.getSpace().getActions();
+        if(fieldActions != null){
+            for (FieldAction action: fieldActions) {
+                action.doAction(this, currentPlayer.getSpace());
+            }
+        }
+    }
     /**
      * @ Anisa
      * Udbygget med ekstra commands

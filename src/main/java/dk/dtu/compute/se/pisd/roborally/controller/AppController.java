@@ -66,7 +66,7 @@ public class AppController implements Observer {
         this.roboRally = roboRally;
     }
     /**
-     * @author Christain
+     * @author Christian
      * @author Seier
      * @author Ekkart Kindler
      * */
