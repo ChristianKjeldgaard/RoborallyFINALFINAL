@@ -236,8 +236,15 @@ public class Board extends Subject {
 
         // XXX: V1 add the move count to the status message
         // XXX: V2 changed the status so that it shows the phase, the current player and the number of steps
-        return "Phase: " + getPhase().name() +
-                ", Player = " + getCurrentPlayer().getName() +", Round = " + counter;
+
+        StringBuilder message  = new StringBuilder("Phase: " + getPhase().name() +
+                ", Player = " + getCurrentPlayer().getName() + ", Round = " + counter + ", Checkpoints: ");
+        for(int i = 0; i < players.size(); i++){
+            Player player = players.get(i);
+            message.append("P").append(i+1).append("=").append(player.getCheckpointsHit()).append(", ");
+        }
+        message = new StringBuilder(message.substring(0, message.length() - 2));
+        return message.toString();
     }
 
 

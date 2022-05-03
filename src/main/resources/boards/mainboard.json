@@ -155,6 +155,24 @@
       ],
       "x": 4,
       "y": 3
+    },
+    {
+      "walls": [
+      ],
+      "actions": [
+        {
+          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.controller.PushPanel",
+          "INSTANCE": {
+            "pushDirection": "WEST",
+            "executeNumbers": [
+              1,
+              4
+            ]
+          }
+        }
+      ],
+      "x": 7,
+      "y": 7
     }
   ]
 }

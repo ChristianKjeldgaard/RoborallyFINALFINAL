@@ -133,6 +133,9 @@ public class AppController implements Observer {
                     Board board = RepositoryAccess.getRepository().loadGameFromDB(oneGame.id);
                     gameController = new GameController(board);
                     roboRally.createBoardView(gameController);
+                    for(int i = 0; i < board.getPlayersNumber(); i++){
+                        board.getPlayer(i).attach(this);
+                    }
                     return;
                 }
             }
@@ -189,7 +192,7 @@ public class AppController implements Observer {
     public void update(Subject subject) {
         if(subject instanceof Player) {
             Player player = (Player) subject;
-            if (player.getCheckpointsHit() == gameController.board.getCheckpointsNumber()){
+            if (gameController != null && player.getCheckpointsHit() == gameController.board.getCheckpointsNumber()){
                 Alert alert = new Alert(AlertType.CONFIRMATION);
                 alert.setTitle("Winner found");
                 alert.setContentText(player.getName() +" has won");

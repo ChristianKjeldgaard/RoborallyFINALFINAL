@@ -6,11 +6,10 @@ CREATE TABLE IF NOT EXISTS Game (
   gameID int NOT NULL UNIQUE AUTO_INCREMENT,
 
   name varchar(255),
-
+  nameOfBoard varchar(100),
   phase tinyint,
   step tinyint,
   currentPlayer tinyint NULL,
-
   PRIMARY KEY (gameID),
   FOREIGN KEY (gameID, currentPlayer) REFERENCES Player(gameID, playerID)
 );;
@@ -21,7 +20,7 @@ CREATE TABLE IF NOT EXISTS Player (
 
   name varchar(255),
   colour varchar(31),
-
+  checkpoints int,
   positionX int,
   positionY int,
   heading tinyint,

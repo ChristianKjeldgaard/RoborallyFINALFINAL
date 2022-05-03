@@ -83,7 +83,7 @@ class Repository implements IRepository {
 				ps.setNull(2, Types.TINYINT); // game.getPlayerNumber(game.getCurrentPlayer())); is inserted after players!
 				ps.setInt(3, game.getPhase().ordinal());
 				ps.setInt(4, game.getStep());
-
+				ps.setString(5, game.boardName);
 				// If you have a foreign key constraint for current players,
 				// the check would need to be temporarily disabled, since
 				// MySQL does not have a per transaction validation, but
@@ -291,7 +291,7 @@ class Repository implements IRepository {
 				// game = new Board(width,height);
 				// TODO and we should also store the used game board in the database
 				//      for now, we use the default game board
-				game = LoadBoard.loadBoard(null);
+				game = LoadBoard.loadBoard(rs.getString("nameOfBoard"));
 				if (game == null) {
 					return null;
 				}
@@ -437,6 +437,7 @@ class Repository implements IRepository {
 			rs.updateInt(PLAYER_POSITION_X, player.getSpace().x);
 			rs.updateInt(PLAYER_POSITION_Y, player.getSpace().y);
 			rs.updateInt(PLAYER_HEADING, player.getHeading().ordinal());
+			rs.updateInt("checkpoints", player.getCheckpointsHit());
 			rs.insertRow();
 		}
 
@@ -463,7 +464,9 @@ class Repository implements IRepository {
 				player.setSpace(game.getSpace(x,y));
 				int heading = rs.getInt(PLAYER_HEADING);
 				player.setHeading(Heading.values()[heading]);
-
+				for(int j = 0; j < rs.getInt("checkpoints"); j++){
+					player.addCheckpoint();
+				}
 				// TODO  should also load players program and hand here
 			} else {
 				// TODO error handling
@@ -488,6 +491,7 @@ class Repository implements IRepository {
 				rs.updateInt(PLAYER_POSITION_Y, player.getSpace().y);
 			}
 			rs.updateInt(PLAYER_HEADING, player.getHeading().ordinal());
+			rs.updateInt("checkpoints", player.getCheckpointsHit());
 			// TODO error handling
 			// TODO take care of case when number of players changes, etc
 			rs.updateRow();
@@ -498,7 +502,7 @@ class Repository implements IRepository {
 	}
 
 	private static final String SQL_INSERT_GAME =
-			"INSERT INTO Game(name, currentPlayer, phase, step) VALUES (?, ?, ?, ?)";
+			"INSERT INTO Game(name, currentPlayer, phase, step, nameOfBoard) VALUES (?, ?, ?, ?, ?)";
 
 	private PreparedStatement insert_game_stmt = null;
 
