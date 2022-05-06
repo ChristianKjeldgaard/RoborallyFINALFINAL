@@ -13,6 +13,10 @@ import java.util.List;
  * @author Ali Hassan Tariq (s205853)
  * @author Anisa Riaz (s216237)
  * @author Ali Shanoof (S215716)
+ *
+ * Når en spiller lander på et PushPanel felt,
+ * kaldes vores doAction metode. PushPanel går så hen og flytter
+ * spilleren med en moveToSpace i vores GameController
  * */
 
 public class PushPanel extends FieldAction{

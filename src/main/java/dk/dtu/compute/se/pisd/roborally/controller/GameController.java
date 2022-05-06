@@ -42,8 +42,8 @@ public class GameController {
 
     /**
      * @ Ali Shanoof (S215716)
-     * This is just some dummy controller operation to make a simple move to see something
-     * happening on the board. This method should eventually be deleted!
+     * Controller operation to make a simple move to see something
+     * happening on the board.
      *
      * @param space the space to which the current player should move
      */
@@ -59,6 +59,8 @@ public class GameController {
     }
     /**
      * @ Ali Shanoof (S215716)
+     * Skifter tur mellem spillerne for hver runde.
+     * Spiller 1 bevæger sig først, og derefter 2,3 osv.
      * */
     private void setNextPlayer(){
         Player currentPlayer = board.getCurrentPlayer();
@@ -74,6 +76,11 @@ public class GameController {
         }
     }
 
+    /**
+     * command funktionen, når robotterne programmers ud fra programmeringskortene,
+     * udføres og fortsættes.
+     * @param command
+     */
     public void executeCommandOptionAndContinue(Command command){
         Player player = board.getCurrentPlayer();
         if(player != null && command != null){
@@ -103,6 +110,10 @@ public class GameController {
     }
 
     // XXX: V2
+
+    /**
+     * Programmerings fasen for programmeringskortene startes
+     */
     public void startProgrammingPhase() {
         board.setPhase(Phase.PROGRAMMING);
         board.setCurrentPlayer(board.getPlayer(0));
@@ -126,6 +137,11 @@ public class GameController {
     }
 
     // XXX: V2
+
+    /**
+     * Der genereres random command card til spille kortene.
+     * @return
+     */
     private CommandCard generateRandomCommandCard() {
         Command[] commands = Command.values();
         int random = (int) (Math.random() * commands.length);
@@ -133,6 +149,11 @@ public class GameController {
     }
 
     // XXX: V2
+
+    /**
+     * Når alle spiller har programmeret deres robot,
+     * skal man kunne trykke på "Finish Programming".
+     */
     public void finishProgrammingPhase() {
         makeProgramFieldsInvisible();
         makeProgramFieldsVisible(0);
@@ -142,6 +163,11 @@ public class GameController {
     }
 
     // XXX: V2
+
+    /**
+     * kortfelterne trækkes
+     * @param register
+     */
     private void makeProgramFieldsVisible(int register) {
         if (register >= 0 && register < Player.NO_REGISTERS) {
             for (int i = 0; i < board.getPlayersNumber(); i++) {
@@ -153,6 +179,10 @@ public class GameController {
     }
 
     // XXX: V2
+
+    /**
+     *  Kortfelterne fjernes
+     */
     private void makeProgramFieldsInvisible() {
         for (int i = 0; i < board.getPlayersNumber(); i++) {
             Player player = board.getPlayer(i);
@@ -164,18 +194,30 @@ public class GameController {
     }
 
     // XXX: V2
+
+    /**
+     * Programmeringskortene bliver alle af alle robotter eksekveret.
+     */
     public void executePrograms() {
         board.setStepMode(false);
         continuePrograms();
     }
 
     // XXX: V2
+    /**
+     * Programmeringskortene bliver programmet på kun den aktuelles
+     * robots aktuelle kort, hvor den eksekveres.
+     */
     public void executeStep() {
         board.setStepMode(true);
         continuePrograms();
     }
 
     // XXX: V2
+
+    /**
+     * fortsættelse af robot programmering.
+     */
     private void continuePrograms() {
         do {
             executeNextStep();
@@ -185,6 +227,9 @@ public class GameController {
     /**
      * @author Ali Hassan Tariq (s205853)
      * @author Ekkart Kindler
+     *
+     * finder hvem den næste spiller er og kører videre.
+     * Når alle spiller er færdige, vil den påbegynde programmeringsfasen.
      * */
     // XXX: V2
     private void executeNextStep() {
@@ -242,7 +287,8 @@ public class GameController {
     }
     /**
      * @author Anisa Riaz (s216237)
-     * Udbygget med ekstra commands
+     * Udbygget med ekstra commands.
+     * Implementerer de fire kommandoer som programmet støtter
      * */
     private void executeCommand(@NotNull Player player, Command command) {
         if (player != null && player.board == board && command != null) {
@@ -280,6 +326,8 @@ public class GameController {
     /**
      * @author Anisa Riaz (s216237)
      * @author Ekkart Kindler
+     *
+     * Spillerne rykkes...?
      * */
     public void moveToSpace(
             @NotNull Player player,
@@ -313,6 +361,8 @@ public class GameController {
     }
     /**
      * @ Ali Shanoof (S215716)
+     * moveForward giver mulighed for at rykke
+     * spilleren til tomme felter hvor der er space via programmeringskort.
      * */
     public void moveForward(@NotNull Player player) {
         if(player != null && player.getHeading() != null){
@@ -330,6 +380,7 @@ public class GameController {
 
     /**
      * @author Ali Hassan Tariq (s205853)
+     * rykker spilleren frem via kort
      * */
     public void fastForward(@NotNull Player player) {
         for (int i = 0; i < 3; i++) {
@@ -347,6 +398,7 @@ public class GameController {
     }
     /**
      * @Christian Kjeldgaard Jensen (s215703)
+     *  rykker også spilleren via kort
      * */
     public void moveTwo(@NotNull Player player){
         for (int i = 0; i < 2; i++) {
@@ -364,6 +416,7 @@ public class GameController {
     }
     /**
      * @Seier Kieldsen (s215708)
+     * Uvending med kort
      * */
     public void uTurn(@NotNull Player player){
         if(player != null && player.getHeading() != null){
@@ -372,6 +425,7 @@ public class GameController {
     }
     /**
      * @author Anisa Riaz (s216237)
+     * ryk tilbage via kort
      * */
     public void goBackwards(@NotNull Player player){
         if(player != null && player.getHeading() != null){
@@ -395,6 +449,7 @@ public class GameController {
     }
     /**
      * @author Ali Hassan Tariq (s205853)
+     * ryk til venstre via kort
      * */
     // TODO Assignment V2
     public void turnLeft(@NotNull Player player) {

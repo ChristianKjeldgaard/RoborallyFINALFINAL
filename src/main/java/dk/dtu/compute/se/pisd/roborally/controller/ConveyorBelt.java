@@ -50,6 +50,7 @@ public class ConveyorBelt extends FieldAction {
     }
     /**
      * @author Ali Hassan Tariq (s205853)
+     * Spillerne kan overtage space og skubbe til hinanden.
      * */
     @Override
     public boolean doAction(@NotNull GameController gameController, @NotNull Space space) {

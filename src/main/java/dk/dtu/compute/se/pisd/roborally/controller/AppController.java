@@ -51,7 +51,7 @@ import java.util.Optional;
  * ...
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- *
+ * Antal spiller og farverne på objekterne/spillerene.
  */
 public class AppController implements Observer {
 
@@ -69,6 +69,10 @@ public class AppController implements Observer {
      * @author Christian Kjeldgaard Jensen (s215703)
      * @author Seier Kieldsen (s215708)
      * @author Ekkart Kindler
+     *
+     * Opretter ny spil, vælger antal spillere der med
+     * og vælger i mellem to boards.
+     *
      * */
     public void newGame() {
         ChoiceDialog<Integer> dialog = new ChoiceDialog<>(PLAYER_NUMBER_OPTIONS.get(0), PLAYER_NUMBER_OPTIONS);
@@ -111,11 +115,15 @@ public class AppController implements Observer {
         }
     }
 
+    /**
+     * Giver mulighed for at gemme aktiv spil i database.
+     */
     public void saveGame() {
         RepositoryAccess.getRepository().updateGameInDB(gameController.board);
     }
     /**
      * @author Anisa Riaz (s216237)
+     * Giver mulighed for at loade det gemte spil fra database.
      * */
     public void loadGame() {
         List<GameInDB> games = RepositoryAccess.getRepository().getGames();
@@ -167,7 +175,7 @@ public class AppController implements Observer {
     /**
      * Herunder ses implementering af exit funtionen i spillet
      * hvor når man trykker på file/exit, kommer en confirmation som
-     * kan besvares med Ok eller cancel.
+     * kan besvares med Ok eller cancel. Ved tryk på Ok lukker man spillet.
      */
     public void exit() {
         if (gameController != null) {
@@ -192,7 +200,11 @@ public class AppController implements Observer {
         return gameController != null;
     }
 
-
+    /**
+     * observer implementers så når spil tilstanden ændres,
+     * sendes en alert til spillet om vinderen.
+     * @param subject the subject which changed
+     */
     @Override
     public void update(Subject subject) {
         if(subject instanceof Player) {
