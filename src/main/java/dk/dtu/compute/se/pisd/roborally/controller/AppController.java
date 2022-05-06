@@ -164,6 +164,11 @@ public class AppController implements Observer {
         return false;
     }
 
+    /**
+     * Herunder ses implementering af exit funtionen i spillet
+     * hvor når man trykker på file/exit, kommer en confirmation som
+     * kan besvares med Ok eller cancel.
+     */
     public void exit() {
         if (gameController != null) {
             Alert alert = new Alert(AlertType.CONFIRMATION);

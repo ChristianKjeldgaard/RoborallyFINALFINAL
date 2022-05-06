@@ -329,7 +329,7 @@ class Repository implements IRepository {
 	}
 
 	/**
-	 * @Ali H
+	 * @Ali Shanoof (S215716)
 	 * */
 	private void loadCommandcards(Board game){
 		Connection connection = connector.getConnection();

@@ -180,7 +180,7 @@ public class SpaceView extends StackPane implements ViewObserver {
     }
 
     /**
-     * @Ali H
+     * @Ali Shanoof (S215716)
      * */
     private void drawPushPanel(){
         PushPanel pushPanel = (PushPanel) space.getActions().get(0);

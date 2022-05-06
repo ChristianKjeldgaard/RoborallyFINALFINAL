@@ -84,7 +84,7 @@ public class Space extends Subject {
     }
 
     /**
-     * @Ali H
+     * @Ali Shanoof (S215716)
      * */
     public List<Heading> getWalls() {
         return walls;

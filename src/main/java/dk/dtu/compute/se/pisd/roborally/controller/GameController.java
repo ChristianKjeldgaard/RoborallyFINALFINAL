@@ -41,7 +41,7 @@ public class GameController {
     }
 
     /**
-     * @ Ali H
+     * @ Ali Shanoof (S215716)
      * This is just some dummy controller operation to make a simple move to see something
      * happening on the board. This method should eventually be deleted!
      *
@@ -58,7 +58,7 @@ public class GameController {
 
     }
     /**
-     * @ Ali H
+     * @ Ali Shanoof (S215716)
      * */
     private void setNextPlayer(){
         Player currentPlayer = board.getCurrentPlayer();
@@ -278,7 +278,7 @@ public class GameController {
         }
     }
     /**
-     * @Ali H
+     * @Ali Shanoof (S215716)
      * @author Ekkart Kindler
      * */
     public void moveToSpace(
@@ -312,7 +312,7 @@ public class GameController {
         }
     }
     /**
-     * @ Ali H
+     * @ Ali Shanoof (S215716)
      * */
     public void moveForward(@NotNull Player player) {
         if(player != null && player.getHeading() != null){

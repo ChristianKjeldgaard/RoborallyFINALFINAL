@@ -135,6 +135,8 @@ public class PlayerView extends Tab implements ViewObserver {
 
     /**
      * @author Ali Hassan Tariq (s205853)
+     * @author Ali Shanoof (S215716)
+     * @author Anisa
      * Vis interaktive korts knapper neders i funktionen
      * */
     @Override
