@@ -182,7 +182,7 @@ public class SpaceView extends StackPane implements ViewObserver {
     }
 
     /**
-     * @Ali Shanoof (S215716)
+     * @author Ali Shanoof (S215716)
      * @author Ali Hassan Tariq (s205853)
      * */
     private void drawPushPanel(){

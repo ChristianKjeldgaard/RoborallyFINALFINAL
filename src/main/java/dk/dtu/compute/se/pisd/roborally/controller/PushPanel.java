@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @author Ali Hassan Tariq (s205853)
  * @author Anisa Riaz (s216237)
- * @ Ali Shanoof (S215716)
+ * @author Ali Shanoof (S215716)
  * */
 
 public class PushPanel extends FieldAction{

@@ -49,6 +49,7 @@ public class LoadBoard {
 
     /**
      * @author Anisa Riaz (s216237)
+     * @author Ali Shanoof (S215716)
      * */
     public static Board loadBoard(String boardname) {
         if (boardname == null) {
@@ -102,6 +103,7 @@ public class LoadBoard {
     }
     /**
      * @author Ali Hassan Tariq (s205853)
+     * @author Ali Shanoof (S215716)
      * */
 
     public static void saveBoard(Board board, String name) {
