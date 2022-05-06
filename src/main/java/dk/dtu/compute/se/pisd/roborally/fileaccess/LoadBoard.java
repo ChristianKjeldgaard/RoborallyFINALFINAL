@@ -48,7 +48,7 @@ public class LoadBoard {
     private static final String JSON_EXT = "json";
 
     /**
-     * @Anisa Riaz (s. 216237)
+     * @author Anisa Riaz (s216237)
      * */
     public static Board loadBoard(String boardname) {
         if (boardname == null) {

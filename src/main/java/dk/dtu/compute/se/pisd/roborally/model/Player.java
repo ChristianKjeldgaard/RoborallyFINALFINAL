@@ -45,7 +45,8 @@ public class Player extends Subject {
     private Space space;
     private Heading heading = SOUTH;
     /**
-     * @Seier
+     * @author Anisa Riaz (s216237)
+     * @author Ali Hassan Tariq (s205853)
      * */
     private int checkpointsHit = 0;
     private CommandCardField[] program;

@@ -1,7 +1,7 @@
 package dk.dtu.compute.se.pisd.roborally.model;
 
 /**
- * @Anisa Riaz (s. 216237)
+ * @author Anisa Riaz (s216237)
  * */
 public class ImpossibleMoveException extends Exception {
     private Player player;

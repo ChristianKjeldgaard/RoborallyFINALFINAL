@@ -241,7 +241,7 @@ public class GameController {
         }
     }
     /**
-     * @Anisa Riaz (s. 216237)
+     * @author Anisa Riaz (s216237)
      * Udbygget med ekstra commands
      * */
     private void executeCommand(@NotNull Player player, Command command) {
@@ -278,7 +278,7 @@ public class GameController {
         }
     }
     /**
-     * @Ali Shanoof (S215716)
+     * @author Anisa Riaz (s216237)
      * @author Ekkart Kindler
      * */
     public void moveToSpace(
@@ -371,7 +371,7 @@ public class GameController {
         }
     }
     /**
-     * @Anisa Riaz (s. 216237)
+     * @author Anisa Riaz (s216237)
      * */
     public void goBackwards(@NotNull Player player){
         if(player != null && player.getHeading() != null){

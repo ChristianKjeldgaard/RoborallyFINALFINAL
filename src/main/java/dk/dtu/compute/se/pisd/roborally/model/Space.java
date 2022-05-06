@@ -77,7 +77,7 @@ public class Space extends Subject {
     }
 
     /**
-     * @Anisa Riaz (s. 216237)
+     * @author Anisa Riaz (s216237)
      * */
     public void setWalls(List<Heading> walls) {
         this.walls = walls;

@@ -30,6 +30,7 @@ import java.util.List;
  *
  * @author Ekkart Kindler, ekki@dtu.dk
  * @author Ali Shanoof (S215716)
+ * @author Anisa Riaz (s216237)
  * Flere commands tilføjet
  */
 public enum Command {
