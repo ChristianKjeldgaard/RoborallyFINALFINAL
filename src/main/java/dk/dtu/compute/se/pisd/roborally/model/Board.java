@@ -212,8 +212,8 @@ public class Board extends Subject {
     }
 
     /**
-     * @author Christian
-     * @author Seier
+     * @author Christian Kjeldgaard Jensen (s.215703)
+     * @author Seier Kieldsen (s. 215708)
      * */
     public int getCheckpointsNumber(){
         int numberOfCheckpointsOnBoard = 0;

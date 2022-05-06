@@ -241,7 +241,7 @@ public class GameController {
         }
     }
     /**
-     * @ Anisa
+     * @Anisa Riaz (s. 216237)
      * Udbygget med ekstra commands
      * */
     private void executeCommand(@NotNull Player player, Command command) {
@@ -371,7 +371,7 @@ public class GameController {
         }
     }
     /**
-     * @Anisa
+     * @Anisa Riaz (s. 216237)
      * */
     public void goBackwards(@NotNull Player player){
         if(player != null && player.getHeading() != null){

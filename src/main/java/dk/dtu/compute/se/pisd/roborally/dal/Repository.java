@@ -269,7 +269,7 @@ class Repository implements IRepository {
 		}
 	}
 	/**
-	 * @Anisa
+	 * @Anisa Riaz (s. 216237)
 	 * load af kort tilføjet
 	 * */
 	@Override

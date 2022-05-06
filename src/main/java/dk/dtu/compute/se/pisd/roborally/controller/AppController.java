@@ -115,7 +115,7 @@ public class AppController implements Observer {
         RepositoryAccess.getRepository().updateGameInDB(gameController.board);
     }
     /**
-     * @ Anisa
+     * @Anisa Riaz (s. 216237)
      * */
     public void loadGame() {
         List<GameInDB> games = RepositoryAccess.getRepository().getGames();
