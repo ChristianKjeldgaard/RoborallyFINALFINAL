@@ -327,7 +327,7 @@ public class GameController {
      * @author Anisa Riaz (s216237)
      * @author Ekkart Kindler
      *
-     * Spillerne rykkes...?
+     * Spillerne rykkes
      * */
     public void moveToSpace(
             @NotNull Player player,

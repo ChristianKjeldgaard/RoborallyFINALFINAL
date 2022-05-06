@@ -47,7 +47,8 @@ public class Player extends Subject {
     /**
      * @author Anisa Riaz (s216237)
      * @author Ali Hassan Tariq (s205853)
-     * Player dannes og gives datalogik.
+     * indholder spillerene og diverse metoder
+     * og funktioner om spillerne, samt datalogik.
      * */
     private int checkpointsHit = 0;
     private CommandCardField[] program;

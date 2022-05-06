@@ -60,7 +60,8 @@ public class Board extends Subject {
     private boolean stepMode;
 
     /**
-     * Boardet dannes
+     * Spillebrættet samt de regler og funktioner
+     * der høre til spillets bræt.
      * @param width
      * @param height
      * @param boardName

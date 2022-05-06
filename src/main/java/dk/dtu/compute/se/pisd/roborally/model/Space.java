@@ -30,7 +30,8 @@ import java.util.List;
  * ...
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- *
+ * Space, Felter og vægge i spillet,
+ * og udgør en vigtige rolle i forhold til spillets regler.
  */
 public class Space extends Subject {
 
