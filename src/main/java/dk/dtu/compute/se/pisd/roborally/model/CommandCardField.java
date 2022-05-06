@@ -27,7 +27,7 @@ import dk.dtu.compute.se.pisd.designpatterns.observer.Subject;
  * ...
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- *
+ * kortfelterne dannes og gives funktioner.
  */
 public class CommandCardField extends Subject {
 

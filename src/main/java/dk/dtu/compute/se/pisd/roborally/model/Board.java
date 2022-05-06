@@ -59,6 +59,12 @@ public class Board extends Subject {
     private int counter = 0;
     private boolean stepMode;
 
+    /**
+     * Boardet dannes
+     * @param width
+     * @param height
+     * @param boardName
+     */
     public Board(int width, int height, @NotNull String boardName) {
         this.boardName = boardName;
         this.width = width;
@@ -214,6 +220,7 @@ public class Board extends Subject {
     /**
      * @author Christian Kjeldgaard Jensen (s.215703)
      * @author Seier Kieldsen (s. 215708)
+     * Der dannes checkpoint numre i boadet.
      * */
     public int getCheckpointsNumber(){
         int numberOfCheckpointsOnBoard = 0;

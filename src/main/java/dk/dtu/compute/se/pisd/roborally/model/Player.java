@@ -47,6 +47,7 @@ public class Player extends Subject {
     /**
      * @author Anisa Riaz (s216237)
      * @author Ali Hassan Tariq (s205853)
+     * Player dannes og gives datalogik.
      * */
     private int checkpointsHit = 0;
     private CommandCardField[] program;

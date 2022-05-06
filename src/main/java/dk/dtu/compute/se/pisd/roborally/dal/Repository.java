@@ -330,6 +330,7 @@ class Repository implements IRepository {
 
 	/**
 	 * @Ali Shanoof (S215716)
+	 * kommando kort loades ind i repo.
 	 * */
 	private void loadCommandcards(Board game){
 		Connection connection = connector.getConnection();
