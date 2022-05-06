@@ -129,14 +129,16 @@ public class Player extends Subject {
     }
 
     /**
-     * @Christian
+     * @author Christian Kjeldgaard Jensen (s215703)
+     * @author Seier Kieldsen (s215708)
      * */
     public int getCheckpointsHit() {
         return checkpointsHit;
     }
 
     /**
-     * @Christian
+     * @author Christian Kjeldgaard Jensen (s215703)
+     * @author Seier Kieldsen (s215708)
      * */
     public void addCheckpoint(){
         checkpointsHit += 1;

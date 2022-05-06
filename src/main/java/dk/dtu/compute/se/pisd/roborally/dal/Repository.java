@@ -145,8 +145,8 @@ class Repository implements IRepository {
 		return false;
 	}
 	/**
-	 * @Christian 
-	 * @Seier
+	 * @author Christian Kjeldgaard Jensen (s215703)
+	 * @author Seier Kieldsen (s215708)
 	 * commandcards tilføjet til load, den er ikke i create fordi det ikke er nødvendigt med vores implementering
 	 * */
 	@Override

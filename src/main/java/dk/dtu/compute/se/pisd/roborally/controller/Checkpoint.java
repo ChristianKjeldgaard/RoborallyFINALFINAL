@@ -4,8 +4,8 @@ import dk.dtu.compute.se.pisd.roborally.model.Player;
 import dk.dtu.compute.se.pisd.roborally.model.Space;
 import org.jetbrains.annotations.NotNull;
 /**
- * @author Seier
- * @author Christian
+ * @author Christian Kjeldgaard Jensen (s215703)
+ * @author Seier Kieldsen (s215708)
  * */
 public class Checkpoint extends FieldAction{
 

@@ -228,8 +228,8 @@ public class GameController {
     }
 
     /**
-     * @author Seier
-     * @author Christian
+     * @author Christian Kjeldgaard Jensen (s215703)
+     * @author Seier Kieldsen (s215708)
      * Håndterer aktivering af boardelements
      */
     public void triggerBoardElements(Player currentPlayer){
@@ -346,7 +346,7 @@ public class GameController {
         }
     }
     /**
-     * @Christian 
+     * @Christian Kjeldgaard Jensen (s215703)
      * */
     public void moveTwo(@NotNull Player player){
         for (int i = 0; i < 2; i++) {
@@ -363,7 +363,7 @@ public class GameController {
         }
     }
     /**
-     * @Seier
+     * @Seier Kieldsen (s215708)
      * */
     public void uTurn(@NotNull Player player){
         if(player != null && player.getHeading() != null){

@@ -97,8 +97,8 @@ public class SpaceView extends StackPane implements ViewObserver {
     }
 
     /**
-     * @author Christian
-     * @author Seier
+     * @author Christian Kjeldgaard Jensen (s215703)
+     * @author Seier Kieldsen (s215708)
      * @author Ekkart Kindler
      * Denne klasse tjekker hvilken fieldAction vi har på feltet hvis nogen, og kalder den rigtige "tegnemetode"
      * */
@@ -124,8 +124,8 @@ public class SpaceView extends StackPane implements ViewObserver {
     }
 
     /**
-     * @author Christian
-     * @author Seier
+     * @author Christian Kjeldgaard Jensen (s215703)
+     * @author Seier Kieldsen (s215708)
      * Tegner checkpoint
      * */
     public void drawCheckpoints(){
@@ -137,7 +137,8 @@ public class SpaceView extends StackPane implements ViewObserver {
     }
 
     /**
-     * @Seier
+     * @author Christian Kjeldgaard Jensen (s215703)
+     * @author Seier Kieldsen (s215708)
      * */
     private void drawWalls(){
         List<Heading> walls = space.getWalls();
@@ -166,7 +167,8 @@ public class SpaceView extends StackPane implements ViewObserver {
     }
 
     /**
-     * @Christian
+     * @author Christian Kjeldgaard Jensen (s215703)
+     * @author Seier Kieldsen (s215708)
      * */
     private void drawConveyorBelt(){
         ConveyorBelt conveyorBelt = (ConveyorBelt) space.getActions().get(0);
