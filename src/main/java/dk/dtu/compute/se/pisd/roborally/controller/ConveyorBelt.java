@@ -49,7 +49,7 @@ public class ConveyorBelt extends FieldAction {
         this.heading = heading;
     }
     /**
-     * @ Ali Malik
+     * @author Ali Hassan Tariq (s205853)
      * */
     @Override
     public boolean doAction(@NotNull GameController gameController, @NotNull Space space) {

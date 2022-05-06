@@ -183,7 +183,7 @@ public class GameController {
     }
 
     /**
-     * @ Ali Malik
+     * @author Ali Hassan Tariq (s205853)
      * @author Ekkart Kindler
      * */
     // XXX: V2
@@ -329,7 +329,7 @@ public class GameController {
     }
 
     /**
-     * @Ali Malik
+     * @author Ali Hassan Tariq (s205853)
      * */
     public void fastForward(@NotNull Player player) {
         for (int i = 0; i < 3; i++) {
@@ -394,7 +394,7 @@ public class GameController {
         }
     }
     /**
-     * @Ali Malik
+     * @author Ali Hassan Tariq (s205853)
      * */
     // TODO Assignment V2
     public void turnLeft(@NotNull Player player) {

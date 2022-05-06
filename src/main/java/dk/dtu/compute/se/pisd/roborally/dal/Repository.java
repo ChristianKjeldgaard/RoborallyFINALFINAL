@@ -204,7 +204,7 @@ class Repository implements IRepository {
 	private static final String SQL_GET_PROGRAM_CARD = "SELECT * FROM ProgrammingCards WHERE gameID = ? AND playerID = ?" +
 			" AND cardNumber = ?";
 	/**
-	 * @Ali Malik
+	 * @author Ali Hassan Tariq (s205853)
 	 * */
 	private void updateCardsInDB(Board game){
 		Connection connection = connector.getConnection();

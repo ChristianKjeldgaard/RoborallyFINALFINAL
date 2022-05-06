@@ -101,7 +101,7 @@ public class LoadBoard {
 		return null;
     }
     /**
-     * @Ali Malik
+     * @author Ali Hassan Tariq (s205853)
      * */
 
     public static void saveBoard(Board board, String name) {

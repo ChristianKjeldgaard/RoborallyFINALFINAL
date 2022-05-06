@@ -91,14 +91,14 @@ public class Space extends Subject {
     }
 
     /**
-     * @Ali Malik
+     * @author Ali Hassan Tariq (s205853)
      * */
     public void setFieldActions(List<FieldAction> fieldActions) {
         this.fieldActions = fieldActions;
     }
 
     /**
-     * @Ali Malik
+     * @author Ali Hassan Tariq (s205853)
      * */
     public List<FieldAction> getActions() {
         return fieldActions;
