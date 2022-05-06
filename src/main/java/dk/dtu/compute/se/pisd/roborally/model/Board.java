@@ -221,7 +221,7 @@ public class Board extends Subject {
     /**
      * @author Christian Kjeldgaard Jensen (s.215703)
      * @author Seier Kieldsen (s. 215708)
-     * Der dannes checkpoint numre i boadet.
+     * Der dannes checkpoint numre i boardet.
      * */
     public int getCheckpointsNumber(){
         int numberOfCheckpointsOnBoard = 0;
