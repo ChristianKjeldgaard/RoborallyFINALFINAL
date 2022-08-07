@@ -340,7 +340,9 @@ class Repository implements IRepository {
 
 	/**
 	 * @Ali Shanoof (S215716)
-	 * kommando kort loades ind i repo.
+	 * Kode bruges til at indlæse kommandokortene til et spil.
+	 * Den opretter først en forbindelse til databasen og gentager derefter alle spillerne i spillet.
+	 * Resultatsættet fra denne forespørgsel gemmes i en variabel kaldet resultSet efter hver spillers programkort.
 	 * */
 	private void loadCommandcards(Board game){
 		Connection connection = connector.getConnection();
@@ -409,6 +411,11 @@ class Repository implements IRepository {
 			e.printStackTrace();
 		}
 	}
+
+	/**
+	 * Koden går gennem hvert af spillene og opretter en forekomst af GameInDB med det pågældende spils id og navn.
+	 * Koden lukker derefter ResultSet-objektet, som bruges til at gemme alle data for spillene ét sted.
+	 */
 	@Override
 	public List<GameInDB> getGames() {
 		// TODO when there many games in the DB, fetching all available games

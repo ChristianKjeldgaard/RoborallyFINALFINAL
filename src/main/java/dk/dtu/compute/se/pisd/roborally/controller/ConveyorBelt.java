@@ -50,7 +50,8 @@ public class ConveyorBelt extends FieldAction {
     }
     /**
      * @author Ali Hassan Tariq (s205853)
-     * Spillerne kan overtage space og skubbe til hinanden.
+     * Koden er et kodestykke fra Game Controller-klassen. Metoden doAction() bruges til at flytte spilleren i spilcontrolleren. 
+     * Den tjekker, om der er nogen naboer til denne spiller, ved at kalde getNeighbour(), og hvis der ikke er nogen, sker der ikke noget.
      * */
     @Override
     public boolean doAction(@NotNull GameController gameController, @NotNull Space space) {

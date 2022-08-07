@@ -30,6 +30,11 @@ package dk.dtu.compute.se.pisd.roborally.dal;
  * dataen, hvilket betyder at programmet kan afsluttes efter gemmelsen, og kan efterfølgende blive
  * indhentet som tidligere. Implementeringen og etableringen af forbindelsen til databasen foregår i
  * vores DAL-mappe (Data Access Layer).
+ * 
+ * Koden bruges til at oprette en statisk forekomst af Repository-klassen ved hjælp af Connector-klassen. 
+ * Koden tjekker, om der er en forekomst af Repository, og hvis ikke, opretter den en ved hjælp af Connector. 
+ * Det returnerer det nyoprettede Repository-objekt til den, der har bedt om det.
+
  */
 public class RepositoryAccess {
     

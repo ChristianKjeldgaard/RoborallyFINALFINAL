@@ -27,7 +27,10 @@ import dk.dtu.compute.se.pisd.designpatterns.observer.Subject;
  * ...
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- * kortfelterne realiseres og gives funktioner.
+ * Kode er et kommandokortfelt, der har spilleren som Subject.
+ * Det synlige felt angiver, om kortet kan ses af andre spillere i spillet.
+ * Det indeholder også en metode kaldet getCard(),
+ * som returnerer det aktuelle kort, og en metode til at setCard() til at blive vist på skærmen.
  */
 public class CommandCardField extends Subject {
 

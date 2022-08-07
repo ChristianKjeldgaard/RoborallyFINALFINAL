@@ -31,8 +31,10 @@ import java.util.List;
  * @author Ekkart Kindler, ekki@dtu.dk
  * @author Ali Shanoof (S215716)
  * @author Anisa Riaz (s216237)
- * Flere commands tilføjet.
- * Kommandoerne realiseres
+ *
+ * Koden er en Command-klasse, der er designet til at blive brugt med en enum.
+ * Konstruktøren tager to parametre: en er strengrepræsentationen af kommandoen, og en anden er en række kommandoer.
+ * Hver kommando har et visningsnavn, som også er angivet i Commandenum.
  */
 public enum Command {
 

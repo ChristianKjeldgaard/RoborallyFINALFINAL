@@ -129,6 +129,8 @@ public class AppController implements Observer {
     /**
      * @author Anisa Riaz (s216237)
      * Giver mulighed for at loade det gemte spil fra database.
+     * Den opretter en arraylist til at gemme spil-id'er og gentager hvert spil på listen. 
+     * For hvert spil viser det en dialog med to muligheder: "Vælg spil" og "Indlæs spil".
      * */
     public void loadGame() {
         List<GameInDB> games = RepositoryAccess.getRepository().getGames();
@@ -206,8 +208,9 @@ public class AppController implements Observer {
     }
 
     /**
-     * observer implementers så når spil tilstanden ændres,
-     * sendes en alert til spillet om vinderen.
+     * Koden starter med at kontrollere, om Subjectet er en spiller. 
+     * Hvis det er det, så tjekker koden for at se, om der er nogen kontrolpunkter tilbage på brættet, og om den spiller har ramt dem alle.
+     * Hvis de har, vises en advarsel med deres navn samt teksten "Vinder fundet" og en bekræftelsesmeddelelse om, at de vandt.
      * @param subject the subject which changed
      */
     @Override

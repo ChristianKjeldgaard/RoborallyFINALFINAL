@@ -47,8 +47,9 @@ public class Player extends Subject {
     /**
      * @author Anisa Riaz (s216237)
      * @author Ali Hassan Tariq (s205853)
-     * indholder spillerene og diverse metoder
-     * og funktioner om spillerne, samt datalogik.
+     * Kode bruges til at oprette en ny spillerinstans på brættet.
+     * Klassens konstruktør tager tre parametre ind: et bord, en farve og et navn.
+     * Det opretter også en række CommandCardField-objekter, som er oprettet med dette objekt som deres overordnede.
      * */
     private int checkpointsHit = 0;
     private CommandCardField[] program;

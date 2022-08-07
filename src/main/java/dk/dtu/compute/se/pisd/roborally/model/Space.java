@@ -86,6 +86,7 @@ public class Space extends Subject {
 
     /**
      * @Ali Shanoof (S215716)
+     * Koden returnerer en liste over alle væggene i rummet.
      * */
     public List<Heading> getWalls() {
         return walls;
@@ -93,6 +94,7 @@ public class Space extends Subject {
 
     /**
      * @author Ali Hassan Tariq (s205853)
+     * Koden er en ændring af den originale kode.
      * */
     public void setFieldActions(List<FieldAction> fieldActions) {
         this.fieldActions = fieldActions;
@@ -100,6 +102,7 @@ public class Space extends Subject {
 
     /**
      * @author Ali Hassan Tariq (s205853)
+     * Koden bruges til at få en liste over alle de handlinger, der er udført på en mark.
      * */
     public List<FieldAction> getActions() {
         return fieldActions;

@@ -18,6 +18,10 @@ public class Checkpoint extends FieldAction{
 
     /**
      * Checkpoints implementeres til spillet, hvor der tilføjes Checkpoints.
+     * 
+     * Koden er en metode, der kontrollerer, om spilleren har ramt deres sidste kontrolpunkt, 
+     * og hvis det er tilfældet, vil de tilføje et mere.
+     * 
      * @param gameController the gameController of the respective game
      * @param space the space this action should be executed for
      * @return

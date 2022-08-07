@@ -60,8 +60,10 @@ public class Board extends Subject {
     private boolean stepMode;
 
     /**
-     * Spillebrættet samt de regler og funktioner
-     * der høre til spillets bræt.
+     * Koden nedenfor opretter et array kaldet space, der gemmer alle space på brættet.
+     * Det erklærer også nogle variabler for at holde styr på,
+     * hvor mange skridt hver spiller har taget indtil nu,
+     * og hvor mange flere skridt de har tilbage, før de når slutspillet.
      * @param width
      * @param height
      * @param boardName
