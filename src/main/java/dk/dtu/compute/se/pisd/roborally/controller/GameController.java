@@ -42,8 +42,9 @@ public class GameController {
 
     /**
      * @ Ali Shanoof (S215716)
-     * Controller operation to make a simple move to see something
-     * happening on the board.
+     * Koden flytter den aktuelle afspiller til den angivne plads. 
+     * Hvis der ikke er nogen spiller på det felt, sætter det den nye spiller til at være den næste på brættet. 
+     * Den øger også en tæller med 1 og opdaterer den på spillepladen, hver gang en spiller bevæger sig.
      *
      * @param space the space to which the current player should move
      */
@@ -55,12 +56,11 @@ public class GameController {
             int incremented_counter = board.getCounter() + 1;
             board.setCounter(incremented_counter);
         }
-
     }
     /**
      * @ Ali Shanoof (S215716)
-     * Skifter tur mellem spillerne for hver runde.
-     * Spiller 1 bevæger sig først, og derefter 2,3 osv.
+     * Hvis der ikke er nogen aktuel spiller i spillet, 
+     * sætter koden den næste spiller til 0.
      * */
     private void setNextPlayer(){
         Player currentPlayer = board.getCurrentPlayer();
@@ -327,7 +327,12 @@ public class GameController {
      * @author Anisa Riaz (s216237)
      * @author Ekkart Kindler
      *
-     * Spillerne rykkes
+     * Her i vores gamecontroller anvender vi rekursion til metoden moveToSpace(), hvilket
+     * betyder at metoden kalder på sig selv, dette gør den ved hver spiller der står på et felt, som
+     * vi er ved at rykke til med en anden spiller.
+     *
+     * spilleren skubbes på feltet foran frem, indtil alle spillere der skubber til hinanden er flyttet eller en
+     * væg umuliggør flytningen.
      * */
     public void moveToSpace(
             @NotNull Player player,

@@ -26,6 +26,10 @@ package dk.dtu.compute.se.pisd.roborally.dal;
  *
  * @author Ekkart Kindler, ekki@dtu.dk
  *
+ * Databasen bliver koblet til programmet for at gemme
+ * dataen, hvilket betyder at programmet kan afsluttes efter gemmelsen, og kan efterfølgende blive
+ * indhentet som tidligere. Implementeringen og etableringen af forbindelsen til databasen foregår i
+ * vores DAL-mappe (Data Access Layer).
  */
 public class RepositoryAccess {
     

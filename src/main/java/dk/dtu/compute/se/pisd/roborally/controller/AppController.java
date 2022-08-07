@@ -52,6 +52,9 @@ import java.util.Optional;
  *
  * @author Ekkart Kindler, ekki@dtu.dk
  * Antal spiller og farverne på objekterne/spillerene.
+ *
+ * vi opretter en liste og beder
+ * den om at holde objekter af typen af henholdsvis Integer og String
  */
 public class AppController implements Observer {
 
@@ -70,8 +73,10 @@ public class AppController implements Observer {
      * @author Seier Kieldsen (s215708)
      * @author Ekkart Kindler
      *
-     * Opretter ny spil, vælger antal spillere der med
-     * og vælger i mellem to boards.
+     *Koden giver brugeren mulighed for at vælge antallet af spillere i dette spil.
+     *Hvis de vælger en mulighed fra en liste, tages de tilbage til deres spilcontrollerklasse,
+     *hvor de kan fortsætte med at spille eller gemme deres fremskridt, hvis det ønskes.
+     *Koden forsøger at skabe et nyt spil med brugeren.
      *
      * */
     public void newGame() {
@@ -91,7 +96,7 @@ public class AppController implements Observer {
 
             // XXX the board should eventually be created programmatically or loaded from a file
             //     here we just create an empty board with the required number of players.
-            ArrayList<String> boards = new ArrayList<>();
+             ArrayList<String> boards = new ArrayList<>();
             boards.add("defaultboard");
             boards.add("mainboard");
             ChoiceDialog<String> boardDialog = new ChoiceDialog<>(boards.get(0), boards);

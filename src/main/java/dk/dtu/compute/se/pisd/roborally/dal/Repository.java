@@ -68,6 +68,11 @@ class Repository implements IRepository {
 		this.connector = connector;
 	}
 
+	/**
+	 * Vi har i vores repository klasse lavet en createGameInDB metode, hvori vi har lavet et enkelt
+	 * 	PreparedStatement, denne PreparedStatment har vi tildelt navnet ps, og vi manipulere den
+	 * 	yderligere 5 gange
+	 */
 	@Override
 	public boolean createGameInDB(Board game) {
 		if (game.getGameId() == null) {
@@ -147,7 +152,9 @@ class Repository implements IRepository {
 	/**
 	 * @author Christian Kjeldgaard Jensen (s215703)
 	 * @author Seier Kieldsen (s215708)
-	 * commandcards tilføjet til load, den er ikke i create fordi det ikke er nødvendigt med vores implementering
+	 * commandcards tilføjet til load, den er ikke i create fordi det ikke er nødvendigt med vores implementering.
+	 *
+	 * preparedstatements benytter SQL Update queries til at opdatere vores database.
 	 * */
 	@Override
 	public boolean updateGameInDB(Board game) {
@@ -271,6 +278,9 @@ class Repository implements IRepository {
 	/**
 	 * @author Anisa Riaz (s216237)
 	 * load af kort tilføjet
+	 * Vores metode for loadGameFromDB er baseret på id, f.eks. id=1. Vi henter det tilsvarende
+	 * data fra vores database, som så gå hen og bliver til java-datatyper og komponerer et nyt
+	 * objekt af vores spille-klasse, som så returneres.
 	 * */
 	@Override
 	public Board loadGameFromDB(int id) {

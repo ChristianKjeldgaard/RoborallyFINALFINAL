@@ -37,6 +37,9 @@ import org.jetbrains.annotations.NotNull;
  *
  * @author Ekkart Kindler, ekki@dtu.dk
  *
+ * Playerviewet har ansvaret for at vise programming cards der er til rådighed for brugeren.
+ * Desuden giver Playerview spilleren mulighed for at vælge hvilken command-option spilleren
+ * foretrækker ved interaktive programmeringskort.
  */
 public class PlayerView extends Tab implements ViewObserver {
 
