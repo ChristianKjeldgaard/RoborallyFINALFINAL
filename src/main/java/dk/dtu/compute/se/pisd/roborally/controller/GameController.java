@@ -77,8 +77,9 @@ public class GameController {
     }
 
     /**
-     * command funktionen, når robotterne programmers ud fra programmeringskortene,
-     * udføres og fortsættes.
+     * Koden udføres, når spilleren trykker på "fortsæt"-knappen på spillepladen.
+     * Hvis der ikke er nogen aktuel spiller, eller kommandoen ikke eksisterer,
+     * vil setNextPlayer() blive kaldt for at finde ud af, hvem der skal være den næste i rækken til turen.
      * @param command
      */
     public void executeCommandOptionAndContinue(Command command){
@@ -112,7 +113,10 @@ public class GameController {
     // XXX: V2
 
     /**
-     * Programmerings fasen for programmeringskortene startes
+     * Kode forsøger at skabe et bræt med to spillere.
+     * Den første spiller er sat som den første spiller på brættet.
+     * Koden analyserer derefter alle kortene på brættet fra 1-8.
+     * Det afsluttes med at generere et tilfældigt kommandokort og også gøre det synligt.
      */
     public void startProgrammingPhase() {
         board.setPhase(Phase.PROGRAMMING);
@@ -139,7 +143,9 @@ public class GameController {
     // XXX: V2
 
     /**
-     * Der genereres random command card til spille kortene.
+     * Koden er en metode, der genererer et tilfældigt kommandokort.
+     * ver gang denne funktion køres, vil den generere et nyt CommandCard-objekt med en tilfældigt valgt kommando fra listen over tilgængelige kort.
+     * Den opretter en heltalsvariabel kaldet tilfældig og sætter dens værdi til at være lig med Math. random() * commands.length.
      * @return
      */
     private CommandCard generateRandomCommandCard() {
@@ -151,8 +157,9 @@ public class GameController {
     // XXX: V2
 
     /**
-     * Når alle spiller har programmeret deres robot,
-     * skal man kunne trykke på "Finish Programming".
+     * Koden gør alle felter i programmet usynlige og gør dem så synlige igen, når fasen skifter til AKTIVERING.
+     * Koden er implementeringen af faseskiftmetoden til en computers onboarding-proces,
+     * hvor onboarding udløses af den aktuelle spiller, der er ombord.
      */
     public void finishProgrammingPhase() {
         makeProgramFieldsInvisible();
@@ -165,7 +172,10 @@ public class GameController {
     // XXX: V2
 
     /**
-     * kortfelterne trækkes
+     * Koden forsøger at gøre alle felterne i en spillers program synlige.
+     * Den bruger en if-sætning til at bestemme om værdien af register er
+     * større end 0 og mindre end eller lig med Player.
+     * NO_REGISTERS, så går den gennem hver af spillerne på brættet.
      * @param register
      */
     private void makeProgramFieldsVisible(int register) {
@@ -181,7 +191,7 @@ public class GameController {
     // XXX: V2
 
     /**
-     *  Kortfelterne fjernes
+     * Koden går gennem hver af spillerne og gør deres programfelter usynlige.
      */
     private void makeProgramFieldsInvisible() {
         for (int i = 0; i < board.getPlayersNumber(); i++) {
@@ -196,7 +206,7 @@ public class GameController {
     // XXX: V2
 
     /**
-     * Programmeringskortene bliver alle af alle robotter eksekveret.
+     * Koden vil få programmet til at fortsætte med at køre, indtil det når slutningen.
      */
     public void executePrograms() {
         board.setStepMode(false);
@@ -205,8 +215,7 @@ public class GameController {
 
     // XXX: V2
     /**
-     * Programmeringskortene bliver programmet på kun den aktuelles
-     * robots aktuelle kort, hvor den eksekveres.
+     * Koden indstiller trintilstanden til sand.
      */
     public void executeStep() {
         board.setStepMode(true);
@@ -216,7 +225,9 @@ public class GameController {
     // XXX: V2
 
     /**
-     * fortsættelse af robot programmering.
+     * Koden udføres, indtil brættet er i en step-mode.
+     * Hvis den ikke er det, udføres koden igen.
+     * Koden vil fortsætte med at køre, indtil brættet er i en step-mode.
      */
     private void continuePrograms() {
         do {
@@ -228,8 +239,12 @@ public class GameController {
      * @author Ali Hassan Tariq (s205853)
      * @author Ekkart Kindler
      *
-     * finder hvem den næste spiller er og kører videre.
-     * Når alle spiller er færdige, vil den påbegynde programmeringsfasen.
+     * Kode forsøger at kontrollere, om den aktuelle spiller har et kort, der kan aktiveres.
+     * Hvis der er en, så vil den få sin kommando fra kortets kommandofelt.
+     * Den tredje kodelinje udfører en if-sætning, som kontrollerer, om der er en handling på kortet eller ej.
+     * Kode forsøger at skabe en ny spiller og tildele dem kommandoen "move".
+     * Koden vil udføre kommandoen på den aktuelle spiller, og derefter fortsætte med at gå gennem alle 10 spillere.
+     * Hver gang vi går gennem alle spillere, skal vi øge vores tællervariabel med 1.
      * */
     // XXX: V2
     private void executeNextStep() {
@@ -366,8 +381,10 @@ public class GameController {
     }
     /**
      * @ Ali Shanoof (S215716)
-     * moveForward giver mulighed for at rykke
-     * spilleren til tomme felter hvor der er space via programmeringskort.
+     * Kode er en metode, der flytter spilleren et felt frem.
+     * Kontrollerer først, om der er et nextSpace,
+     * i hvilket tilfælde det flytter til det nextSpace med spillerens kurs som destination.
+     * Hvis ikke, så sker der intet, og ingen undtagelse bliver kastet på grund af denne check for umulige træk.
      * */
     public void moveForward(@NotNull Player player) {
         if(player != null && player.getHeading() != null){
@@ -385,7 +402,10 @@ public class GameController {
 
     /**
      * @author Ali Hassan Tariq (s205853)
-     * rykker spilleren frem via kort
+     * Koden forsøger at flytte spilleren fra deres nuværende position på brættet til en plads,
+     * der er tre pladser væk. Det første argument er destinationen for,
+     * hvor de vil hen, og det andet argument er,
+     * hvilken retning de er på vej i (getNeighbour, moveToSpace).
      * */
     public void fastForward(@NotNull Player player) {
         for (int i = 0; i < 3; i++) {

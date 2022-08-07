@@ -14,9 +14,10 @@ import java.util.List;
  * @author Anisa Riaz (s216237)
  * @author Ali Shanoof (S215716)
  *
- * Når en spiller lander på et PushPanel felt,
- * kaldes vores doAction metode. PushPanel går så hen og flytter
- * spilleren med en moveToSpace i vores GameController
+ * Koden er en del af PushPanel-klassen.
+ * Koden indstiller variablerne pushDirection og executeNumbers til deres respektive værdier.
+ * Metoden getPushDirection() returnerer værdien, som derefter bruges i andre metoder i denne klasse.
+ * Det returnerer også de numre, der udføres, når dette panel trykkes.
  * */
 
 public class PushPanel extends FieldAction{
@@ -39,6 +40,10 @@ public class PushPanel extends FieldAction{
         return executeNumbers;
     }
 
+    /**
+     * Koden forsøger at flytte spilleren fra deres nuværende plads til en nabo.
+     * Hvis de ikke er i den position, vil det returnere falsk
+     */
     @Override
     public boolean doAction(@NotNull GameController gameController, @NotNull Space space) {
         Space neighbour = space.board.getNeighbour(space, pushDirection);
