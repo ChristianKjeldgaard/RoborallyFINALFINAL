@@ -102,7 +102,7 @@ public class Space extends Subject {
 
     /**
      * @author Ali Hassan Tariq (s205853)
-     * Koden bruges til at få en liste over alle de handlinger, der er udført på en mark.
+     * Koden bruges til at få en liste over alle de handlinger, der er udført på field.
      * */
     public List<FieldAction> getActions() {
         return fieldActions;
