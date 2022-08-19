@@ -184,11 +184,11 @@ public class SpaceView extends StackPane implements ViewObserver {
     /**
      * @author Ali Shanoof (S215716)
      * @author Ali Hassan Tariq (s205853)
-     * Koden er ansvarlig for at tegne push-panelet, der skal bruges i et spil.
+     * Koden er ansvarlig for at tegne push-panelet, der skal bruges i spillet.
      * Koden er en del af PushPanel-klassen.
-     * Den opretter et nyt rudeobjekt og tilføjer objekter såsom tekst,
-     * polygon og uigennemsigtig fyldfarve til rudens samling.
-     * */
+     * Den opretter et nyt Pane objekt og tilføjer objekter såsom Rectangle,
+     * Polygon og fill color ved koordinarerne (0,0) ved brug af setFill() metoden til Pane samling.
+     * */)
     private void drawPushPanel(){
         PushPanel pushPanel = (PushPanel) space.getActions().get(0);
         Heading heading = pushPanel.getPushDirection().opposite();

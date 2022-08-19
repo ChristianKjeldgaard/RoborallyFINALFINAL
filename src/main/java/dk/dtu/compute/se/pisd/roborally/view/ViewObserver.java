@@ -30,6 +30,11 @@ import javafx.application.Platform;
  *
  * @author Ekkart Kindler, ekki@dtu.dk
  *
+ * Koden er en klasse, der implementerer Observer-grænsefladen.
+ *   Det har to metoder, updateView og update.
+ *   Den første metode kaldes, når visningen skal opdateres (f.eks. når et nyt element vises på en liste).
+ *   Den anden metode kaldes, når der ikke er flere ændringer at foretage på det aktuelle subject
+ *   (f.eks. efter et element forsvinder fra en liste).
  */
 public interface ViewObserver extends Observer {
 
